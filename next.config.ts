@@ -10,21 +10,20 @@ const nextConfig: NextConfig = {
     ],
   },
   /* config options here */
-  webpack: (config) => {
+  turbopack: {
+    rules: {
+      '*.svg': {
+        as: '*.js',
+        loaders: ['@svgr/webpack'],
+      },
+    },
+  },
+  webpack(config) {
     config.module.rules.push({
-      test: /\.svg$/,
-      issuer: /\.tsx?$/,
+      test: /\.svg$/i,
       use: ['@svgr/webpack'],
     });
     return config;
-  },
-  turbopack: {
-    rules: {
-      '**/*.svg': {
-        loaders: ['@svgr/webpack'],
-        as: '*.js',
-      },
-    },
   },
 };
 
