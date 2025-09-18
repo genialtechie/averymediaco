@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, SVGMotionProps } from 'framer-motion';
 
-interface IconProps extends SVGMotionProps<SVGSVGElement> {}
+type IconProps = SVGMotionProps<SVGSVGElement>;
 
 const iconVariants = {
   hidden: {
@@ -15,8 +15,9 @@ const iconVariants = {
 };
 
 const FolderIcon: React.FC<IconProps> = (props) => {
-  const folderPath = "M12 7h8c0.55 0 1 0.45 1 1v10c0 0.55 -0.45 1 -1 1h-16c-0.55 0 -1 -0.45 -1 -1v-11Z";
-  const tabPath = "M12 7h-9v-1c0 -0.55 0.45 -1 1 -1h6z";
+  const folderPath =
+    'M12 7h8c0.55 0 1 0.45 1 1v10c0 0.55 -0.45 1 -1 1h-16c-0.55 0 -1 -0.45 -1 -1v-11Z';
+  const tabPath = 'M12 7h-9v-1c0 -0.55 0.45 -1 1 -1h6z';
 
   return (
     <motion.svg
