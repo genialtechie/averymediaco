@@ -4,7 +4,6 @@ export default defineType({
   name: 'siteSettings',
   title: 'Site Settings',
   type: 'document',
-  __experimental_actions: [/* "create", "delete", */ 'update', 'publish'],
   fields: [
     defineField({
       name: 'siteTitle',
