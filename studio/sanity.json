@@ -1,0 +1,23 @@
+{
+  "root": true,
+  "project": {
+    "name": "Avery",
+    "basePath": "/studio"
+  },
+  "api": {
+    "projectId": "25c8k47q",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool"
+  ],
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemaTypes/index.ts"
+    }
+  ]
+}
